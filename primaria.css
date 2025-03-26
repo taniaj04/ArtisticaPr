@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('fondojuego.jpg') no-repeat center center; 
+    background-size: cover; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background: rgba(194, 133, 0, 0.384); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.canvas-container {
+    background: #ffffff; 
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.controls {
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 1rem;
+    color: #333;
+}
+
+#colorPicker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+#lineWidth {
+    width: 200px;
+}
+
+#lineWidthValue {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #333;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.actions button, .controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #b19000, #e2b900b9);
+    transform: scale(1.1);
+}
+
+button {
+    background: linear-gradient(90deg, #e2b900b9, #b19000);
+    color: white;
+}
+
+.actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
