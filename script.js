@@ -69,10 +69,18 @@ document.getElementById('clearButton').addEventListener('click', () => {
 
 document.getElementById('saveButton').addEventListener('click', () => {
     reproducirSonido('colorear.mp3');
-    const link = document.createElement('a');
-    link.download = 'mi_arte.png';
-    link.href = canvas.toDataURL();
-    link.click();
+
+    canvas.toBlob((blob) => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'mi_arte.png';
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        URL.revokeObjectURL(link.href); 
+    }, 'image/png');
 });
 
 document.getElementById('restartButton').addEventListener('click', () => {
